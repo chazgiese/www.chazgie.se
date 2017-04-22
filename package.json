@@ -9,6 +9,10 @@
   "keywords": [
     "bootoo"
   ],
+  "repository": {
+   "type": "git",
+   "url": "https://github.com/chazgiese/www.chazgie.se.git"
+ },
   "author": "Chaz Giese",
   "license": "ISC",
   "devDependencies": {
