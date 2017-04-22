@@ -1,0 +1,101 @@
+/*
+___________________
+      GLOBAL STYLES
+*/
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Karla', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 7.5vw;
+  @include breakpoint( medium up ) {
+    font-size: 4.5vw;
+  }
+}
+
+
+
+
+/*
+____________
+      LAYOUT
+*/
+
+section {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  padding: 16px 8px 24px;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: snow;
+  overflow: auto;
+  @include breakpoint( medium up ) {
+    padding: 40px 16px;
+  }
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.panel--top {
+  align-self: flex-start;
+}
+
+.panel--bottom {
+  margin-top: auto;
+}
+
+.panel__item {
+  display: flex;
+  width: 50%;
+}
+
+.panel__item--about {
+  width: 60%;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.panel__item--about,
+.panel__item--links {
+  justify-content: flex-end;
+}
+
+
+
+/*
+________________
+      TYPOGRAPHY
+*/
+
+a,
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+}
+
+h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: transform 250ms ease;
+  white-space: nowrap;
+  will-change: transform;
+  @include breakpoint( medium up ) {
+    transform: rotate(135deg);
+  }
+}
+
+p {
+  font-size: inherit;
+  padding: 0;
+}
